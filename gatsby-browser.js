@@ -2,4 +2,5 @@
 import "typeface-montserrat"
 import "typeface-merriweather"
 
-import "prismjs/themes/prism.css"
+import "./static/styles/index.css"
+import "./static/styles/prism-nord.css"
