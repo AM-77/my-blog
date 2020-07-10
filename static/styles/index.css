@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Source+Sans+Pro:wght@300;400&&display=swap');
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cdcdcd;
+  border-radius: 6px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #232e33;
+  border-radius: 4px
+}
+
+
+body {
+  font-family: "Source Sans Pro";
+  color: #212121;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+  color: #232e33;
+	cursor: pointer;
+	background-image: linear-gradient(to bottom, transparent 0%, transparent 18px, #f9ed43 18px, #f9ed43 100%);
+	opacity: 0.9;
+	background-size: 100% 200%;
+	transition: all 270ms ease;
+	background-position: 0px 0px;
+	padding: 1px 3px;
+	font-family: "Share Tech Mono", ubuntu;
+}
+
+a:hover {
+	opacity: 1;
+	background-position: 0px 100%;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 5%;
+  height: 100vh;
+}
+
+.layout-container.home {
+  overflow: hidden;
+} 
+
+.layout-container footer {
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+
+.layout-container footer a{
+  font-size: 16px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: calc(100vh - 100px);
+}
+
+.bio-container,
+.all-posts {
+  max-width: 420px;
+  min-width: 200px;
+  margin: 0 25px;
+}
+
+.bio-container .header {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.bio-container {
+  margin-bottom: 25px;
+}
+
+.bio-container .header .author-pic {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 68% 32% 64% 36% / 42% 62% 38% 58%;
+  box-shadow: 0px 0px 5px -2px #232e33;
+  animation: animte-mein-foto 5000ms linear 0ms infinite forwards running;
+}
+
+@keyframes animte-mein-foto {
+  0%, 100% {
+    border-radius: 68% 32% 64% 36% / 42% 62% 38% 58%;
+  }
+
+  25% {
+    border-radius: 50% 50% 25% 75% / 59% 45% 55% 41%;
+  }
+
+  50% {
+    border-radius: 50% 50% 46% 54% / 59% 45% 55% 41%;
+  }
+
+  75% {
+    border-radius: 58% 42% 55% 45% / 52% 55% 45% 48%;
+  }
+}
+
+.gatsby-image-wrapper {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.bio-container .header .author-pic {
+  margin: 0 25px
+}
+
+.bio-container .header .author-pic img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.bio-container .header .author-name {
+  font-family: "Share Tech Mono", ubuntu;
+  font-size: 21px;
+  font-weight: 700;
+  color: #232e33;
+  margin-bottom: 10px;
+}
+
+.bio-container .header .author-summary{
+  font-weight: 400;
+  color: #232e33
+}
+
+.bio-container  .footer p {
+  font-weight: 400;
+  color: #232e33;
+  margin-bottom: 0;
+}
+
+.bio-container  .footer .links a {
+  margin-right: 10px;
+}
+
+.all-posts {
+  height: 100%;
+  overflow: auto;
+  padding-top: 25px
+}
+
+.post-card h3.post-title ,
+.post .post-title {
+  margin-bottom: 10px;
+  font-family: "Share Tech Mono", ubuntu;
+}
+
+.post-card .post-date,
+.post .post-date {
+  font-family: "Share Tech Mono", ubuntu;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.post {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width:1100px) { 
+  .layout-container.home {
+    overflow: auto;
+    height: auto;
+  }
+
+  .home-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  .bio-container, .all-posts {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bio-container .header{
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio-container .header .author-info {
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
