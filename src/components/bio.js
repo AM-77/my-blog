@@ -6,17 +6,15 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 250, height: 250) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -27,42 +25,37 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
+
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+    <div className="bio-container">
+      <div className="header">
+        <div  className="author-pic">
+          <Image fixed={data.avatar.childImageSharp.fixed} alt={author.name} />
+        </div>
+        <div className="author-info">
+          <p className="author-name">{author.name}</p>
+          <p className="author-summary">{author.summary}</p>
+        </div>
+      </div>
+      <div className="footer">
+        <p>You can find me here: </p>
+        <div className="links">
+          <Link to="https://github.com/am-77" title="AM-77" >github</Link>
+          <Link to="https://twitter.com/__AM77__" title="__AM77__" >twitter</Link>
+          <Link to="https://www.linkedin.com/in/mohamed-amine-griche" title="mohamed-amine-griche">linkedin</Link>
+          <Link to="https://www.npmjs.com/~am-77" title="AM-77" >npm</Link>
+          <Link to="https://dev.to/am77" title="AM-77" >dev.to</Link>
+          <Link to="https://stackoverflow.com/users/10564525" title="AM-77">stackoverflow</Link>
+          <Link to="https://codepen.io/am-77" title="AM-77" >codepen</Link>
+        </div>
+      </div>
+
     </div>
   )
 }
