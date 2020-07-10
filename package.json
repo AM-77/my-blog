@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "am77-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A bit of code",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Med Amine Griche <amine.griche77@protonmail.ch>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/AM-77/my-blog/issues"
   },
   "dependencies": {
     "gatsby": "^2.23.12",
@@ -38,15 +38,19 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/AM-77/my-blog#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog",
+    "programming",
+    "javascript",
+    "coding"
   ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/AM-77/my-blog.git"
   },
   "scripts": {
     "build": "gatsby build",
