@@ -15,6 +15,9 @@
   border-radius: 4px
 }
 
+::selection {
+  background-color: #f9ed43;
+}
 
 body {
   font-family: "Source Sans Pro";
