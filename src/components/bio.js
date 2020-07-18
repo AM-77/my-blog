@@ -46,7 +46,7 @@ const Bio = () => {
       <div className="footer">
         <p>You can find me here: </p>
         <div className="links">
-          <Link to="https://am-77.github.io/" title="AM-77" >portfolio</Link>
+          <Link to="https://am-77.github.io/" title="AM-77" >website</Link>
           <Link to="https://github.com/am-77" title="AM-77" >github</Link>
           <Link to="https://twitter.com/__AM77__" title="__AM77__" >twitter</Link>
           <Link to="https://www.linkedin.com/in/mohamed-amine-griche" title="mohamed-amine-griche">linkedin</Link>
